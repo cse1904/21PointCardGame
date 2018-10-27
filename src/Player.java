@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Player {
     protected int bet;//总有钱数
     protected String name;
 
     protected int tempBet;//下注数值
+    protected ArrayList<Card> pCards=new ArrayList<>();
 
     protected Player(int bet,String name){
         this.bet=bet;
@@ -21,21 +24,17 @@ public class Player {
         return tempBet;
     }
 
+    public ArrayList<Card> getpCards() {
+        return pCards;
+    }
+
     public void setTempBet(int tempBet) {
         this.tempBet = tempBet;
     }
 
-    public void choose(){
-
+    public void getRandomCard(Cards cards){
+        Card card=cards.randomCard();
+        pCards.add(card);
     }
-    //todo:玩家的赌注加倍，同时再发一张牌，不论是否爆牌，都不能再要牌。
-    public void doubleCard(){
 
-    }
-    public void goOn(){
-
-    }
-    public void stay(){
-
-    }
 }

@@ -4,6 +4,7 @@ public class CardGame {
 
     public static void main(String args[]){
         System.out.println("Welcome to Blackjack!");
+        //todo:输入玩家人数
         int playerNum=3;
         ArrayList<Player> players= new ArrayList<>();
         for(int i=0;i<playerNum;i++){

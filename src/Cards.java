@@ -29,4 +29,13 @@ public class Cards {
             cards.set(j, temp);
         }
     }
+
+    public Card randomCard(){
+        Card card;
+        int i = cards.size();
+        int j = ((int)Math.random()) % i;
+        card=cards.get(j);
+        cards.remove(j);
+        return card;
+    }
 }
